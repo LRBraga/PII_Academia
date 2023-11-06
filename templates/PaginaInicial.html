@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pagina inicial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,500&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">201
+            <img src="imagens/Logoazul.png" alt="LOGOAKDMIA" class="logo">
+            <a href="Pagina_inicial.html"></a>
+        </div>
+        <div class="cabeçalho">
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#horarios">Horários</a></li>
+                    <li><a href="Paginalogin.html">Meu espaço</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="icones-cabeçalho">
+            <a href="https://www.instagram.com/akdmiadojoel/?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank">
+                <img src="imagens/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5511958008614" target="_blank">
+                <img src="imagens/whatsapp.png" alt="Whatsapp">
+            </a>
+        </div>
+    </header>
+</body>
+    <section id="destaque">
+        <div class="conteudo">
+        <h1>Bem-vindo à AKDMIA do Joel</h1>
+        <p>O processo é lento, mas desistir não acelera. Você pode ter resultados ou desculpas, nunca os dois</p>
+        </div>
+    </section>
+    
+    <section id="planos">
+        <div class="container">
+            {%for plano in planos%}
+            <div class="box">
+            <span class="title">{{plano.nome}}al</span>
+            <div>
+                <strong>{{plano.preco}}</strong>
+                <p>{{plano.drescricao}}</p>
+            </div>
+            </div>
+        {% endfor %}
+        </div>
+        <div class="container">
+            <div class="box">
+                <span class="title">Plano Semestral</span>
+                <div>
+                    <strong>R$ 200,00</strong>
+                    <p>Acesso ilimitado às instalações da academia</p>
+                    <p>Acesso a equipamentos de musculação e cardio</p>
+                    <p>Avaliação física inicial e trimestral</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <span class="title">Plano Anual</span>
+                <div>
+                    <strong>R$ 175,00</strong>
+                    <p>Acesso ilimitado às instalações da academia</p>
+                    <p>Acesso a equipamentos de musculação e cardio</p>
+                    <p>Acesso às aulas de treinamento funcional</p>
+                    <p>Avaliação física inicial e trimestral com bioimpedância</p>
+                <div class="container">
+            </div>
+        </div>              
+    </section>
+    
+    <section id="sobre">
+        <div class="conteudo">
+            <h1>Sobre nós</h1>
+            <p>Somos um grupo de colaboradores que têm o objetivo de fazer você alcançar seu objetivo.</p>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <div class="conteudo">
+        <h1>Serviços</h1>
+        <p>Conheça nossos serviços para ajudá-lo a atingir seus objetivos:</p>
+        <div class="container">
+        <ul>
+            <li>Treinamento personalizado</li>
+            <li>Aulas em grupo</li>
+        </ul>
+        </div>
+    </section>
+
+    <section id="horarios">
+            <table class="tabela-horário">
+            <tr>
+                <th>Seg</th>
+                <th>Ter</th>
+                <th>Qua</th>
+                <th>Qui</th>
+                <th>Sex</th>
+                <th>Sab</th>
+                <th>Dom</th>
+            </tr>
+            <tr>
+                <td>06:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>07:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>08:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>09:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>10:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>10:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>12:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>13:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>14:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>15:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td></td>
+
+            </tr><tr>
+                <td>16:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>17:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>18:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>19:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>20:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>21:00</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td>Funcional</td>
+                <td>Musculação</td>
+                <td></td>
+                <td></td>
+            </tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="instrutores">
+        <h2>Instrutores</h2>
+        <ul>
+            <li>
+                <img src="instrutor1.jpg" alt="Instrutor 1">
+                <h3>Nome do Instrutor 1</h3>
+                <p>Especialidade: Musculação</p>
+            </li>
+            <li>
+                <img src="instrutor2.jpg" alt="Instrutor 2">
+                <h3>Nome do Instrutor 2</h3>
+                <p>Especialidade: Pilates</p>
+            </li>
+        </ul>
+    </section>
